@@ -6,56 +6,34 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface IiifThumbnail {
+        "src": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLIiifThumbnailElement extends Components.IiifThumbnail, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLIiifThumbnailElement: {
+        prototype: HTMLIiifThumbnailElement;
+        new (): HTMLIiifThumbnailElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "iiif-thumbnail": HTMLIiifThumbnailElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface IiifThumbnail {
+        "src"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "iiif-thumbnail": IiifThumbnail;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "iiif-thumbnail": LocalJSX.IiifThumbnail & JSXBase.HTMLAttributes<HTMLIiifThumbnailElement>;
         }
     }
 }
