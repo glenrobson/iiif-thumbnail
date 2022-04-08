@@ -7,7 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IiifThumbnail {
+        "height": string;
         "src": string;
+        "width": string;
     }
 }
 declare global {
@@ -23,7 +25,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IiifThumbnail {
+        "height"?: string;
         "src"?: string;
+        "width"?: string;
     }
     interface IntrinsicElements {
         "iiif-thumbnail": IiifThumbnail;
